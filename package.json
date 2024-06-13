@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "npx @biomejs/biome check --write ./src",
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.7.2",
+    "extensible-custom-error": "^0.0.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
