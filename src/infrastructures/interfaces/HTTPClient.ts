@@ -4,18 +4,18 @@ type HTTPRequestConfig = {
 };
 
 interface HTTPClient {
-  get: <T>(url: string, config?: HTTPRequestConfig) => Promise<T>;
-  post: <T>(
+  readonly get: <T>(url: string, config?: HTTPRequestConfig) => Promise<T>;
+  readonly post: <T>(
     url: string,
     data?: unknown,
     config?: HTTPRequestConfig,
   ) => Promise<T>;
-  put: <T>(
+  readonly put: <T>(
     url: string,
     data?: unknown,
     config?: HTTPRequestConfig,
   ) => Promise<T>;
-  delete: <T>(url: string, config?: HTTPRequestConfig) => Promise<T>;
+  readonly delete: <T>(url: string, config?: HTTPRequestConfig) => Promise<T>;
 }
 
 export default HTTPClient;
